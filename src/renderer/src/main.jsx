@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Inventory from './pages/Inventory'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import PageMapping from './pages/pages'
+import Game from './pages/Game'
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: PageMapping.Inventory.path,
     element: <Inventory />
+  },
+  {
+    path: "/game/:id",
+    element: <Game />
   }
 ]);
 

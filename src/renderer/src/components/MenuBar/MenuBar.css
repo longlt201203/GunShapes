@@ -5,3 +5,9 @@
 .menu-bar-item {
     margin: 0.5vh;
 }
+
+.bottom-right-menu {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

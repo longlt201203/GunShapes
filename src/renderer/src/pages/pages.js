@@ -8,15 +8,15 @@ const PageMapping = {
         name: "Inventory"
     },
     Settings: {
-        path: '/home',
+        path: '/',
         name: "Settings"
     },
     Skill: {
-        path: '/home',
+        path: '/',
         name: "Skill"
     },
     Upgrade: {
-        path: '/home',
+        path: '/',
         name: "Upgrade"
     }
 };

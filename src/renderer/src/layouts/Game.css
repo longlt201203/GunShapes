@@ -1,0 +1,10 @@
+#displayer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#gameArea {
+    height: 90%;
+    background-color: aliceblue;
+}

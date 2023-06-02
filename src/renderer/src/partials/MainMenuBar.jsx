@@ -5,7 +5,7 @@ import PageMapping from '../pages/pages';
 
 function MainMenuBar() {
     return (
-        <MenuBar id="main-menu-bar">
+        <MenuBar id="main-menu-bar" className="bottom-right-menu">
             {Object.keys(PageMapping).map((key) => (
                 <MenuBarItem title={PageMapping[key].name} page={PageMapping[key].path} />
             ))}
