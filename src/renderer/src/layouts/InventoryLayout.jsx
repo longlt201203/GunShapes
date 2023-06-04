@@ -1,12 +1,14 @@
 import "./Inventory.css";
+import MainLayout from "./MainLayout";
 import MainMenuBar from "../partials/MainMenuBar";
 
 function InventoryLayout(props) {
     return (
-        <div id="displayer">
-            {props.children}
-            <MainMenuBar/>
-        </div>
+        <MainLayout>
+            <div className="inventoryLayout">
+                {props.children}
+            </div>
+        </MainLayout>
     );
 }
 
