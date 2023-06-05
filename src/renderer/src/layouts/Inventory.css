@@ -146,12 +146,9 @@
     cursor: pointer;
   }
   
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
   .dropdown-content {
+    bottom: 135px;
+    left: 490px;
     display: none;
     position: absolute;
     background-color: #f6f6f6;
@@ -168,7 +165,7 @@
     display: block;
   }
   
-  .dropdown a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {background-color: #c8c4c4;}
   
   .show {display: block;}
 
