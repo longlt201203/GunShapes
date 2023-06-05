@@ -1,4 +1,3 @@
-
 import MenuBar from '../components/MenuBar/MenuBar';
 import MenuBarItem from '../components/MenuBar/MenuBarItem';
 import PageMapping from '../pages/pages';
