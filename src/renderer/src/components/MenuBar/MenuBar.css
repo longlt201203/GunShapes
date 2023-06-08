@@ -1,13 +1,13 @@
 .menu-bar {
-    background-color: red;
+	background-color: red;
 }
 
 .menu-bar-item {
-    margin: 0.5vh;
+	margin: 0.5vh;
 }
 
 .bottom-right-menu {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }

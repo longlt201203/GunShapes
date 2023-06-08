@@ -1,10 +1,9 @@
-function ItemSlots(props){
-    return(
-        <div class="inventory" id="item-slots">
-            {props.children}
-        </div>
-              
-    );
+function ItemSlots(props) {
+	return (
+		<div className='inventory' id='item-slots'>
+			{props.children}
+		</div>
+	);
 }
 
 export default ItemSlots;
