@@ -1,29 +1,46 @@
+
+import { useRef, useState, useEffect } from "react";
+
 function InventoryItemPagination(){
-    function myFunction() {
-        document.querySelector("#dropdown").classList.toggle("show");
-        var div, a, i;
-        div = document.getElementById("dropdown");
-        a = div.getElementsByTagName("a");
-        for (i = 0; i < a.length; i++) {
-          txtValue = a[i].textContent || a[i].innerText;
-        }
+    const [currentCatagory, setCurrentCategory] = useState(null);
+    const [open, setOpen] = useState(false);
+    const dropdownRef = useRef(null);
+    const categories = [
+         "Sort By Alphabet",
+         "Sort by Date Obtained",
+         "Sort by Rarity",
+         "Sort by Type"
+    ];
+    const categoryElements = categories.map((category, index) => (<a id={"Checkout-" + index} onClick={selectCategory} className={currentCatagory == index ? "category-selected" : ""} >{category}</a>));
+
+        useEffect(() => {
+           let handler = (e) => {
+            if(!dropdownRef.current.contains(e.target)){
+                setOpen(false)
+            }
+           }
+
+        document.addEventListener('mousedown', handler);
+        });
+
+    function selectCategory(ev) {
+        const element = ev.target;
+        const id = element.id;
+        setCurrentCategory(id.split("-")[1]);
+
+        // element.classList.toggle("category-selected");
+        // const index = id.split("-")[1];
+        // console.log("Selected category: "+categories[index]);
     }
-    document.getElementById("Checkout").addEventListener("click", checkFuncion);
-        function checkFuncion() {
-            document.getElementById("Checkout").innerHTML = "YOU CLICKED ME!";
-        }
-        
+
     return(
     
         <div className="inventoryItemPagination">
 
            
-            <button onClick={()=>myFunction()} className="dropbtn">Sort Item</button>
-            <div id="dropdown" className="dropdown-content">
-                <a href="" ><p id="Checkout">Sort By Alphabet</p></a>
-                <a href="" ><p id="Checkout">Sort by Date Obtained</p></a>
-                <a href="" ><p id="Checkout"></p>Sort by Rarity</a>
-                <a href="" ><p id="Checkout">Sort by Type</p></a>
+            <button onClick={()=>{setOpen(!open)}} className="dropbtn">Sort Item</button>
+            <div id="dropdown" className={`dropdownContent ${open? 'active' : 'inactive'}`} ref={dropdownRef}>
+                {categoryElements}
             </div>
 
             <button className="pre" onclick="previous()">Previous</button>
