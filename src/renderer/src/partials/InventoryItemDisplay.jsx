@@ -13,7 +13,7 @@ function InventoryItemDisplay() {
 	return (
 		<div className='inventoryItemDisplayer'>
 			<InventoryWeapon>{inventoryWeaponBoxes}</InventoryWeapon>
-			<InventoryAvatar />
+			<InventoryAvatar/>
 		</div>
 	);
 }

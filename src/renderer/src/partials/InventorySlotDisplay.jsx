@@ -1,36 +1,38 @@
 import InventoryItemBox from "./InventoryItemBox";
 import ItemSlots from "./ItemSlot";
 import InventoryItemPagination from "../partials/InventoryItemPagination";
+import {useState} from "react";
+import Draggable from 'react-draggable';
+import $ from 'jquery';
 
-import item_1 from "../assets/item-1.jpg";
+
+import heartItemImg from "../assets/heart.jpg";
+import bombItemImg from "../assets/bomb.jpg";
+import bowItemImg from "../assets/bow.jpg";
+import potionItemImg from "../assets/potion.jpg";
+import trophyItemImg from "../assets/trophy.jpg";
 
 function InventorySlotDisplay() {
-	const count = 63;
-	const inventoryItemBoxes = [];
-	const itemImg_1 = item_1;
-	const item1 = {
-		id: "megumin",
-		img: itemImg_1,
-		count: 30,
-		atk: 100,
-		hp: 100,
-		speed: 100
-	};
-
-	for (let i = 1; i <= count; i++) {
-		if (i == 1) {
-			inventoryItemBoxes.push(<InventoryItemBox id={i} item={item1} />);
-		} else {
-			inventoryItemBoxes.push(<InventoryItemBox id={i} />);
-		}
-	}
-
-	return (
-		<div className='inventorySlotDisplay'>
-			<ItemSlots>{inventoryItemBoxes}</ItemSlots>
-			<InventoryItemPagination />
-		</div>
+    const [inventoryItems, setInventoryItems] = useState([
+		{ id: 0, name: 'heart', img: heartItemImg, count: 30, atk: 100, hp: 100, speed: 100},
+		{ id: 1, name: 'bomb' , img: bombItemImg , count: 30, atk: 100, hp: 100, speed: 100},
+		]
 	);
-}
+
+    const inventoryItemBoxes = [];
+    
+  		for (let i = 0; i < 63; i++) {
+    		inventoryItemBoxes.push(<InventoryItemBox key = {i} item={inventoryItems[i]} />)
+  		}
+
+    return (
+        <div className="inventorySlotDisplay">
+            <ItemSlots>
+                    {inventoryItemBoxes}
+            </ItemSlots>
+            <InventoryItemPagination/>
+        </div>
+    );
+}   
 
 export default InventorySlotDisplay;

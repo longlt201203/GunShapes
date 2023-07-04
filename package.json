@@ -21,10 +21,15 @@
 		"@electron-toolkit/preload": "^1.0.3",
 		"@electron-toolkit/utils": "^1.0.2",
 		"dotenv": "^16.1.1",
+		"jquery": "^3.7.0",
+		"react-dnd": "^13.1.1",
+		"react-dnd-html5-backend": "^16.0.1",
+		"react-draggable": "^4.4.5",
 		"react-router-dom": "^6.11.2"
 	},
 	"devDependencies": {
 		"@electron/notarize": "^1.2.3",
+		"@types/jquery": "^3.5.16",
 		"@vitejs/plugin-react": "^3.1.0",
 		"electron": "^22.3.4",
 		"electron-builder": "^23.6.0",

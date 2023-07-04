@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 function InventoryItemPagination() {
 	const [currentCatagory, setCurrentCategory] = useState(null);
 	const [open, setOpen] = useState(false);
-	const dropdownRef = useRef(null);
+	const dropdownRef = useRef(null);`	`
 	const categories = [
 		"Sort By Alphabet",
 		"Sort by Date Obtained",

@@ -8,7 +8,7 @@ const PageMapping = {
 		name: "Inventory"
 	},
 	Settings: {
-		path: "/",
+		path: "/setting",
 		name: "Settings"
 	},
 	Skill: {

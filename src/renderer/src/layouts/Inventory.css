@@ -25,7 +25,7 @@
 }
 .inventoryLayout .inventoryItemDisplayer .weapon {
 	height: 150px;
-	width: 342px;
+	width: 279px;
 	display: inline-grid;
 	grid-gap: 50px;
 	grid-template-columns: 40px 40px 40px;
@@ -45,7 +45,7 @@
 	border: 1px solid rgba(0, 0, 0, 0.8);
 	background-color: rgb(209, 122, 15);
 	height: 237px;
-	width: 342px;
+	width: 339px;
 }
 .inventoryLayout .inventoryItemDisplayer .avatar .a-slot {
 	padding-left: 60px;
@@ -66,7 +66,6 @@
 	grid-template-columns: 45px 45px 45px 45px 45px 45px 45px 45px 45px;
 	grid-template-rows: 45px 45px 45px 45px 45px 45px 45px;
 	border: 1px solid rgba(0, 0, 0, 0.8);
-	background-color: rgb(41, 16, 152);
 	padding: 3px;
 	padding-left: 10px;
 }
@@ -101,15 +100,16 @@
 	.itemDetail {
 	display: inline-block;
 	position: relative;
+	z-index: 10;
 }
 .number {
 	font-family: "VT323", monospace;
 	font-size: 15px;
-	color: #fefefe;
+	color: #ffffff;
 	position: relative;
 	text-shadow: #333 1px 2px 1px;
-	top: -16px;
-	right: -8px;
+	top: 10px;
+	right: 12px;
 	cursor: default;
 }
 .inventoryLayout .inventoryItemPagination {

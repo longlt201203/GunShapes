@@ -1,0 +1,29 @@
+let itemPosition = [0, 0]
+let observer = null
+
+function emitChange() {
+  observer(itemPosition)
+}
+
+export function observe(o) {
+  if (observer) {
+    throw new Error('Multiple observers not implemented.')
+  }
+
+  observer = o
+  emitChange()
+}
+
+export function moveItem(toX, toY) {
+  itemPosition = [toX, toY]
+  emitChange()
+}
+
+export function canMoveItem(toX, toY) {
+    const dx = toX 
+    const dy = toY 
+  
+    return (
+      (Math.abs(dx) === dx && Math.abs(dy) === dy) 
+    )
+}

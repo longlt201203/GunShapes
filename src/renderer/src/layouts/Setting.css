@@ -1,0 +1,169 @@
+*{
+	border: 0;
+	outline: none;
+	margin-top: 0; 
+}
+.settingLayout{
+	display: grid;
+	place-content: center;
+	height:100%;
+	background-color: antiquewhite;
+}
+.settingLayout h1{
+	padding-top: 20px;
+	padding-left: 328px;
+}
+.musicSetting{
+	box-shadow: 0 1px 10px 0 rgb(0, 0, 0);
+	padding: 25px;
+	border-radius: 25px;
+	width: 800px;
+	font-size: 20px;
+	background-color: #fff;
+}
+.musicSetting h3{
+	margin-bottom: -1px ;
+}
+.slider-cont{
+	display: flex;
+	align-items: center;
+}
+
+.slider {
+	position: relative;
+	width: 750px;
+	height: 8px;
+}
+.slider .slideRange {
+	position: absolute;
+	left: -2px;
+	top: 0;
+	width: 700px;
+	height: 8px;
+	-webkit-appearance: none;
+	background: transparent;
+	z-index: 99;
+}
+.slider .slideRange::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	border: 2px solid rgb(9, 205, 240);
+	cursor: pointer;
+	box-shadow: 0 0 0 1px #fff;
+	border-radius: 50%;
+}
+.slider .slideRange::-webkit-slider-thumb:hover {
+	transform: scale(1.1);
+}
+.slider progress {
+	width: 680px;
+	height:8px;
+	-webkit-appearance: none;
+	position: absolute;
+	top: 0;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.slider progress::-webkit-progress-bar {
+	background: #f0f0f0;
+}
+.slider progress::-webkit-progress-value {
+	background: rgb(9, 205, 240);
+}
+.sliderValue {
+	font-family: "Google Sans Regular";
+	padding-right: 20px;
+	font-size: 30px;
+}
+
+.resolutionSetting {
+	box-shadow: 0 1px 10px 0 rgb(0, 0, 0);
+	padding: 25px;
+	border-radius: 25px;
+	width: 800px;
+	font-size: 20px;
+	background-color: #fff;
+	margin-top: 30px;
+	display: flex;
+}
+.resolutionSetting h3{
+	margin-top: 20px;
+	margin-right: 350px;
+}
+.solutionBox {
+	margin-top: 20px;
+}
+.solutionBox form{
+	border: 1px solid rgb(9, 205, 240);
+	box-shadow: 0 0 0 1px #fff;
+	border-radius: 15px;
+	width: 300px;
+	height: 30px;
+}
+.solutionBox select{
+	width: 290px;
+	height: 20px;
+	margin-top: 5px;
+	font-size: large;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.fpsSetting {
+	box-shadow: 0 1px 10px 0 rgb(0, 0, 0);
+	padding: 25px;
+	border-radius: 25px;
+	width: 800px;
+	font-size: 20px;
+	background-color: #fff;
+	margin-top: 30px;
+	display: flex;
+}
+.fpsSetting h3{
+	margin-top: 20px;
+	margin-right: 465px;
+}
+.fpsBox {
+	margin-top: 20px;
+}
+.fpsBox form{
+	border: 1px solid rgb(9, 205, 240);
+	box-shadow: 0 0 0 1px #fff;
+	border-radius: 15px;
+	width: 300px;
+	height: 30px;
+	text-align: center;
+}
+.fpsBox select{
+	width: 290px;
+	height: 20px;
+	margin-top: 5px;
+	font-size: large;
+	cursor: pointer;
+}
+
+.closeButton{
+	align-items: center;
+	font-size: large;
+	height: 50px;
+	width: 300px;
+	margin-top: 20px;
+	margin-left: 250px;
+	margin-bottom: 20px;
+	border: 1px solid rgb(9, 205, 240);
+	box-shadow: 0 0 0 1px #fff;
+	border-radius: 15px;
+	background-color: #fff;
+	cursor: pointer;
+}
+.closeButton h3{
+	margin-top: 15px;
+	text-align: center;
+}
+.closeButton:hover {
+	transform: scale(1.1);
+}
+
+
